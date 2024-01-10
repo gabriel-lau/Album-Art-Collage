@@ -68,7 +68,7 @@ window.generateGrid = function() {
 		albumHTML = albumHTML + '<div class="row"><div align="center" class="col-lg-12">' + '\n';
 		for (j = 0; j < numCols; j++) {	
 			id = i.toString() + "," + j.toString();
-			albumHTML = albumHTML + '<a id="a" data-target="#myModal" data-toggle="modal" onclick="setCurID(event)"><img ondragover="allowDrop(event)" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" class="albumarts" width=' + imgSize + ' height=' + imgSize + '  src="http://larics.rasip.fer.hr/wp-content/uploads/2016/04/default-placeholder.png" id="' + id + '" alt=""></a>';
+			albumHTML = albumHTML + '<a id="a" data-bs-target="#myModal" data-bs-toggle="modal" onclick="setCurID(event)"><img ondragover="allowDrop(event)" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" class="albumarts" width=' + imgSize + ' height=' + imgSize + '  src="http://larics.rasip.fer.hr/wp-content/uploads/2016/04/default-placeholder.png" id="' + id + '" alt=""></a>';
 		}
 		albumHTML = albumHTML + "</div></div>" + '\n';
 	}
