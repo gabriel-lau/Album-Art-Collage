@@ -1,4 +1,6 @@
-
+body {
+	--bs-primary: #0496ff !important;
+}
 div {
 	font-size: 12px
 }
@@ -20,7 +22,37 @@ footer {
 	text-align: center;
 }
 
+#albums {
+	padding-top: 30px;
+	padding-bottom: 50px;
+	overflow-x: hidden;
+	background-color: #99ccff;
+}
+#header {
+	padding-top: 10px;
+	padding-bottom: 30px;
+	overflow-x: hidden;
+	background-color: #123456;
+	color: white;
+}
+
 #firstrow {
 	padding-top: 0px;
 	padding-bottom: 10px;
+}
+
+#header-container {
+    font-family: Poppins;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+	justify-content: center;
+}
+
+#header-navbar {
+    background-color: #161616;
+}
+
+#header-navbrand {
+    margin: 0%;
 }
