@@ -35,6 +35,7 @@ window.generateGrid = function() {
 	}
 	
 	// Background color
+	/*
 	var backcolor = document.getElementById("backcolor").value;
 	backcolor = backcolor.toLowerCase();
 	if (backcolor.charAt(0) != '#') { 
@@ -45,7 +46,7 @@ window.generateGrid = function() {
 		alert("Invalid Hex Value for Background Color");
 	}
 	$('#albums').css('background-color', backcolor);
-	$('#header').css('background-color', backcolor);
+	$('#header').css('background-color', backcolor);*/
 	
 	// Grid row/cols
 	var numCols = document.getElementById("numCols").value;
@@ -54,7 +55,8 @@ window.generateGrid = function() {
 	numRows = document.getElementById("numRows").value;
 	
 	// Image size
-	var imgSize = document.getElementById("artsize").value;
+	// var imgSize = document.getElementById("artsize").value;
+	var imgSize = 100;
 	$('.albumarts').css('height',imgSize.toString() + 'px');
 	$('.albumarts').css('width',imgSize.toString() + 'px');
 	
@@ -76,10 +78,11 @@ window.generateGrid = function() {
 	$("#albums").html(albumHTML); // Insert HTML
 	
 	// Image Margins (wait til document is ready)
+	/*
 	var marginSize = document.getElementById("marginSize").value;
 	$(document).ready(function () {
 		$('img').css('margin', marginSize + 'px');
-	});
+	});*/
 	
 	// Reinsert previous images
 	if (!initialFlag) {

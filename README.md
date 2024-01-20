@@ -1,8 +1,8 @@
 - [X] Fix functionality with new version of Bootstrap
-- [ ] Update API keys to use environment variables
-- [ ] Fix formatting issues of website
+- [X] Fix formatting issues of website
 - [ ] Add aspect ratio options
 - [ ] Add download support
 - [ ] Remove background color options
+- [ ] Update API keys to use environment variables
 - [ ] (Maybe) Add support for other image hosting sites
 - [ ] (Maybe) Add support for user uploaded images
