@@ -39,14 +39,14 @@
 			<!-- LEFT INPUT FIELDS -->
 			<div class="col-lg-4">
 				<div class="container">
-					<form class="form-horizontal">
-						<div class="row">
-							<label for="inputColor" class="col-form-label col-lg-8"># of Rows</label>
-							<div class="col-lg-4">
-								<input type="text" class="form-control" id="numRows" value="3"></input>
-							</div>
-						</div>
-					</form>
+					<div class="btn-group-vertical d-flex" role="group" aria-label="Vertical radio toggle button group">
+						<input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
+						<label class="btn btn-outline-secondary" for="vbtn-radio1">Radio 1</label>
+						<input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
+						<label class="btn btn-outline-secondary" for="vbtn-radio2">Radio 2</label>
+						<input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio3" autocomplete="off">
+						<label class="btn btn-outline-secondary" for="vbtn-radio3">Radio 3</label>
+					</div>
 				</div>
 			</div>
 			<!-- MIDDLE INPUT FIELDS -->
@@ -60,12 +60,12 @@
 											placeholder="Hex Value">
 									</div>
 								</div-->
-						<div class="row">
-							<label for="inputColor" class="col-form-label col-lg-8"># of Rows</label>
-							<div class="col-lg-4">
+						<!--div class="row">
+							<h4 for="inputColor" class="col-form-label col-lg-2">Rows</h4>
+							<div class="col-lg-10">
 								<input type="text" class="form-control" id="numRows" value="3"></input>
 							</div>
-						</div>
+						</div-->
 						<!--div class="row">
 									<label for="inputColor" class="col-form-label col-lg-8">Margin (in pixels)</label>
 									<div class="col-lg-4">
@@ -78,11 +78,19 @@
 										<input type="text" class="form-control" id="artsize" value="100">
 									</div>
 								</div-->
-						<div class="row">
-							<label for="inputColor" class="col-form-label col-lg-8"># of Columns</label>
-							<div class="col-lg-4">
+						<!--div class="row">
+							<label for="inputColor" class="col-form-label col-lg-2">Columns</label>
+							<div class="col-lg-10">
 								<input type="text" class="form-control" id="numCols" value="10"></input>
 							</div>
+						</div-->
+						<div class="input-group mb-3">
+							<span class="input-group-text">Rows</span>
+							<input type="text" class="form-control" id="numRows" value="3">
+						</div>
+						<div class="input-group mb-3">
+							<span class="input-group-text">Columns</span>
+							<input type="text" class="form-control" id="numCols" value="10">
 						</div>
 					</form>
 				</div>
@@ -90,14 +98,11 @@
 			<!-- RIGHT INPUT FIELDS -->
 			<div class="col-lg-4">
 				<div class="container">
-					<form class="form-horizontal">
-						<div class="row">
-							<label for="inputColor" class="col-form-label col-lg-8"># of Rows</label>
-							<div class="col-lg-4">
-								<input type="text" class="form-control" id="numRows" value="3"></input>
-							</div>
-						</div>
-					</form>	
+					<div class="input-group mb-3">
+						<input type="text" class="form-control" placeholder="Width" aria-label="Width">
+						<span class="input-group-text">by</span>
+						<input type="text" class="form-control" placeholder="Height" aria-label="Height">
+					</div>					  
 				</div>
 			</div>
 		</div>
