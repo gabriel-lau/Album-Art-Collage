@@ -243,6 +243,64 @@ var defaultAlbums = function() {
 }
 
 
+document.getElementById('left-input').addEventListener('click', function() {
+	let leftCard = document.getElementById('left-input');
+	leftCard.classList.add('border-primary');
+	let leftCardBody = leftCard.getElementsByClassName('card-body');
+	leftCardBody[0].classList.replace('text-secondary', 'text-primary');
+
+	let middleCard = document.getElementById('middle-input');
+	middleCard.classList.remove('border-primary');
+	let middleCardBody = middleCard.getElementsByClassName('card-body');
+	middleCardBody[0].classList.remove('text-primary');
+	middleCardBody[0].classList.add('text-secondary');
+
+	let rightCard = document.getElementById('right-input');
+	rightCard.classList.remove('border-primary');
+	let rightCardBody = rightCard.getElementsByClassName('card-body');
+	rightCardBody[0].classList.remove('text-primary');
+	rightCardBody[0].classList.add('text-secondary');
+});
+
+document.getElementById('middle-input').addEventListener('click', function() {
+	let middleCard = document.getElementById('middle-input');
+	middleCard.classList.add('border-primary');
+	let middleCardBody = middleCard.getElementsByClassName('card-body');
+	middleCardBody[0].classList.replace('text-secondary', 'text-primary');
+
+	let leftCard = document.getElementById('left-input');
+	leftCard.classList.remove('border-primary');
+	let leftCardBody = leftCard.getElementsByClassName('card-body');
+	leftCardBody[0].classList.remove('text-primary');
+	leftCardBody[0].classList.add('text-secondary');
+
+	let rightCard = document.getElementById('right-input');
+	rightCard.classList.remove('border-primary');
+	let rightCardBody = rightCard.getElementsByClassName('card-body');
+	rightCardBody[0].classList.remove('text-primary');
+	rightCardBody[0].classList.add('text-secondary');
+});
+
+document.getElementById('right-input').addEventListener('click', function() {
+	let rightCard = document.getElementById('right-input');
+	rightCard.classList.add('border-primary');
+	let rightCardBody = rightCard.getElementsByClassName('card-body');
+	rightCardBody[0].classList.replace('text-secondary', 'text-primary');
+
+	let leftCard = document.getElementById('left-input');
+	leftCard.classList.remove('border-primary');
+	let leftCardBody = leftCard.getElementsByClassName('card-body');
+	leftCardBody[0].classList.remove('text-primary');
+	leftCardBody[0].classList.add('text-secondary');
+
+	let middleCard = document.getElementById('middle-input');
+	middleCard.classList.remove('border-primary');
+	let middleCardBody = middleCard.getElementsByClassName('card-body');
+	middleCardBody[0].classList.remove('text-primary');
+	middleCardBody[0].classList.add('text-secondary');
+
+});
+
 /*
 	var canvasArea = document.getElementById("albums");
 	var t = canvasArea.getContext('2d');

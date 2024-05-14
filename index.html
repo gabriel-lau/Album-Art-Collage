@@ -1,4 +1,4 @@
-<html>
+<html  lang="en" data-bs-theme="light">
 
 <head>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -19,15 +19,13 @@
 </head>
 
 <body>
-	<div class="row">
-		<nav id="header-navbar" class="navbar" data-bs-theme="dark">
-			<div id="header-container" class="container-fluid">
-				<a id="header-navbrand" class="navbar-brand" href="#">Album Art Wallpaper Maker</a>
-			</div>
-		</nav>
-	</div>
+	<nav id="header-navbar" class="navbar" data-bs-theme="dark">
+		<div id="header-container" class="container-fluid">
+			<a id="header-navbrand" class="navbar-brand" href="#">Album Art Wallpaper Maker</a>
+		</div>
+	</nav>
 
-	<div class="row">
+	<div>
 		<div class="col-lg-12 text-center container-fluid" id="header">
 			<b>Instructions:</b> Click on a box to insert album art &middot; Drag/drop to move images &middot;
 			Change grid settings
@@ -35,84 +33,65 @@
 	</div>
 	<!-- INPUT FIELDS -->
 	<div class="container text-center">
-		<div class="row align-items-start">
+		<div class="row justify-content-center py-4">
 			<!-- LEFT INPUT FIELDS -->
-			<div class="col-lg-4">
-				<div class="container">
-					<div class="btn-group-vertical d-flex" role="group" aria-label="Vertical radio toggle button group">
-						<input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
-						<label class="btn btn-outline-secondary" for="vbtn-radio1">Radio 1</label>
-						<input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
-						<label class="btn btn-outline-secondary" for="vbtn-radio2">Radio 2</label>
-						<input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio3" autocomplete="off">
-						<label class="btn btn-outline-secondary" for="vbtn-radio3">Radio 3</label>
+			<div class="col-12 col-lg-3">
+				<div id="left-input" class="container card h-100">
+					<div class="card-body text-secondary">
+						<h5 class="card-title">Presets</h5>
+						<div class="btn-group-vertical d-flex" role="group" aria-label="Vertical radio toggle button group">
+							<input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
+							<label class="btn" for="vbtn-radio1">Radio 1</label>
+							<input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
+							<label class="btn" for="vbtn-radio2">Radio 2</label>
+							<input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio3" autocomplete="off">
+							<label class="btn" for="vbtn-radio3">Radio 3</label>
+						</div>
 					</div>
 				</div>
 			</div>
 			<!-- MIDDLE INPUT FIELDS -->
-			<div class="col-lg-4">
-				<div class="container">
-					<form class="form-horizontal">
-						<!--div class="row">
-									<label for="inputColor" class="col-form-label col-lg-7">Background Color (Hex)</label>
-									<div class="col-lg-5">
-										<input type="text" class="form-control" id="backcolor" value="#123456"
-											placeholder="Hex Value">
-									</div>
-								</div-->
-						<!--div class="row">
-							<h4 for="inputColor" class="col-form-label col-lg-2">Rows</h4>
-							<div class="col-lg-10">
-								<input type="text" class="form-control" id="numRows" value="3"></input>
+			<div class="col-12 col-lg-3">
+				<div id="middle-input" class="container card h-100 border-primary">
+					<div class="card-body text-primary">
+						<h5 class="card-title">Rows & Columns</h5>
+						<form class="form-horizontal">
+							<div class="input-group mb-3">
+								<span class="input-group-text">Rows</span>
+								<input type="text" class="form-control" id="numRows" value="3">
 							</div>
-						</div-->
-						<!--div class="row">
-									<label for="inputColor" class="col-form-label col-lg-8">Margin (in pixels)</label>
-									<div class="col-lg-4">
-										<input type="text" class="form-control" id="marginSize" value="0"></input>
-									</div>
-								</div-->
-						<!--div class="row">
-									<label for="inputColor" class="col-form-label col-lg-7">Image Size (in pixels)</label>
-									<div class="col-lg-5">
-										<input type="text" class="form-control" id="artsize" value="100">
-									</div>
-								</div-->
-						<!--div class="row">
-							<label for="inputColor" class="col-form-label col-lg-2">Columns</label>
-							<div class="col-lg-10">
-								<input type="text" class="form-control" id="numCols" value="10"></input>
+							<div class="input-group mb-3">
+								<span class="input-group-text">Columns</span>
+								<input type="text" class="form-control" id="numCols" value="10">
 							</div>
-						</div-->
-						<div class="input-group mb-3">
-							<span class="input-group-text">Rows</span>
-							<input type="text" class="form-control" id="numRows" value="3">
-						</div>
-						<div class="input-group mb-3">
-							<span class="input-group-text">Columns</span>
-							<input type="text" class="form-control" id="numCols" value="10">
-						</div>
-					</form>
+						</form>
+					</div>
 				</div>
 			</div>
 			<!-- RIGHT INPUT FIELDS -->
-			<div class="col-lg-4">
-				<div class="container">
-					<div class="input-group mb-3">
-						<input type="text" class="form-control" placeholder="Width" aria-label="Width">
-						<span class="input-group-text">by</span>
-						<input type="text" class="form-control" placeholder="Height" aria-label="Height">
-					</div>					  
+			<div class="col-12 col-lg-3">
+				<div id="right-input" class="container card h-100">
+					<div class="card-body text-secondary">
+						<h5 class="card-title">Custom Dimention</h5>
+						<div class="input-group mb-3">
+							<input type="text" class="form-control" placeholder="Width" aria-label="Width">
+							<span class="input-group-text">by</span>
+							<input type="text" class="form-control" placeholder="Height" aria-label="Height">
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
+		<div class="row py-4">
+			<div class="container text-center">
+				<button type="button" class="btn btn-primary" onclick="generateGrid()">Apply</button>
+				<button type="button" class="btn btn-secondary" onclick="shuffle()">Shuffle</button>
+				<button type="button" class="btn btn-success" onclick="shuffle()">Export</button>
+			</div>
+		</div>
 	</div>
-	<div class="container text-center">
-		<button type="button" class="btn btn-primary" onclick="generateGrid()">Apply</button>
-		<button type="button" class="btn btn-secondary" onclick="shuffle()">Shuffle</button>
-			<button type="button" class="btn btn-success" onclick="shuffle()">Export</button>	
-	</div>
-	
+
+
 	<!-- ALBUMS -->
 	<div width="100%" id="albums">
 	</div>
@@ -143,16 +122,12 @@
 			</div>
 		</div>
 	</div>
-	<footer>
-		<div class="row">
-		</div>
-		<div class="row" text-align="center">
-		</div>
-	</footer>
+	<div>
+		<div class="bg-dark">This is a footer</div>
+	</div>
 	<script src="js/albumart.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
 		</script>
 </body>
-
 </html>
