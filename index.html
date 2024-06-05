@@ -13,6 +13,7 @@
 		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.7.1.js"
 		integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
 	<link href="css/album.css" rel="stylesheet" type="text/css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Album Art Wallpaper Maker</title>
@@ -32,7 +33,7 @@
 		</div>
 	</div>
 	<!-- INPUT FIELDS -->
-	<div class="container text-center">
+	<div id="inputFields" class="container text-center">
 		<div class="row justify-content-center py-4">
 			<!-- LEFT INPUT FIELDS -->
 			<div class="col-12 col-lg-3">
@@ -82,11 +83,14 @@
 				</div>
 			</div>
 		</div>
+
+
+		<!-- BUTTONS -->
 		<div class="row py-4">
 			<div class="container text-center">
 				<button type="button" class="btn btn-primary" onclick="generateGrid()">Apply</button>
 				<button type="button" class="btn btn-secondary" onclick="shuffle()">Shuffle</button>
-				<button type="button" class="btn btn-success" onclick="shuffle()">Export</button>
+				<button type="button" class="btn btn-success" onclick="exportGrid()">Export</button>
 			</div>
 		</div>
 	</div>

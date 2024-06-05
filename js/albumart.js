@@ -63,7 +63,7 @@ window.generateGrid = function() {
 	var id;
 	document.getElementById("albums").innerHTML = ""; // Clear out existing albums
 	
-	var albumHTML = ""; // Init album html block
+	var albumHTML = '<div id="albumsGrid">'; // Init album html block
 	
 	// Generate HTML for album grid
 	for (i = 0; i < numRows; i++) {
@@ -71,11 +71,12 @@ window.generateGrid = function() {
 		for (j = 0; j < numCols; j++) {	
 			id = i.toString() + "," + j.toString();
 			albumHTML = albumHTML + '<a id="a" data-bs-target="#myModal" data-bs-toggle="modal" onclick="setCurID(event)"><img ondragover="allowDrop(event)" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" class="albumarts" width=' + imgSize + ' height=' + imgSize + '  src="http://larics.rasip.fer.hr/wp-content/uploads/2016/04/default-placeholder.png" id="' + id + '" alt=""></a>';
+			//albumHTML = albumHTML + '<a id="a"><img class="albumarts" width=' + imgSize + ' height=' + imgSize + '  src="http://larics.rasip.fer.hr/wp-content/uploads/2016/04/default-placeholder.png" id="' + id + '" alt=""></a>';
 		}
 		albumHTML = albumHTML + "</div></div>" + '\n';
 	}
 	
-	$("#albums").html(albumHTML); // Insert HTML
+	$("#albums").html(albumHTML + "</div>"); // Insert HTML
 	
 	// Image Margins (wait til document is ready)
 	/*
@@ -199,6 +200,19 @@ var shuffle = function() {
 	}
 };
 
+var exportGrid = function() {
+	html2canvas(document.getElementById("albumsGrid"), {
+		useCORS: true,
+		onrendered: function(canvas) {
+			var img = canvas.toDataURL("image/jpeg");
+			var link = document.createElement('a');
+			link.href = img;
+			link.download = 'albums.jpeg';
+			link.click();
+		}
+	});
+}
+
 // Drag and Drop Functionality
 var drag = function(ev) {
 	ev.dataTransfer.setData("text",ev.target.id);
@@ -243,6 +257,7 @@ var defaultAlbums = function() {
 }
 
 
+// Option selction
 document.getElementById('left-input').addEventListener('click', function() {
 	let leftCard = document.getElementById('left-input');
 	leftCard.classList.add('border-primary');
