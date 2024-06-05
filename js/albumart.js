@@ -9,6 +9,12 @@ $(window).on('load', function(){generateGrid();});
 
 /*****Main Functionality*****/
 // Generate grid of img objects
+
+// Presets option has a set number of rows and columns with a fixed image size
+// Rows and columns option has a variable number of rows and columns with a user defined image size
+// Custom Dimention option has a user defined dimention with a calculated number of rows, columns and image size
+
+
 window.generateGrid = function() {
 	
 	// Save current images if not initial site load
@@ -34,28 +40,11 @@ window.generateGrid = function() {
 		}
 	}
 	
-	// Background color
-	/*
-	var backcolor = document.getElementById("backcolor").value;
-	backcolor = backcolor.toLowerCase();
-	if (backcolor.charAt(0) != '#') { 
-		backcolor = "#" + backcolor;
-	}
-	backcolor = backcolor.toString();
-	if (backcolor.length != 7) {
-		alert("Invalid Hex Value for Background Color");
-	}
-	$('#albums').css('background-color', backcolor);
-	$('#header').css('background-color', backcolor);*/
-	
 	// Grid row/cols
 	var numCols = document.getElementById("numCols").value;
 	var numRows = document.getElementById("numRows").value;
 	numCols = document.getElementById("numCols").value;
 	numRows = document.getElementById("numRows").value;
-	
-	// Image size
-	// var imgSize = document.getElementById("artsize").value;
 	var imgSize = 100;
 	$('.albumarts').css('height',imgSize.toString() + 'px');
 	$('.albumarts').css('width',imgSize.toString() + 'px');
@@ -71,7 +60,6 @@ window.generateGrid = function() {
 		for (j = 0; j < numCols; j++) {	
 			id = i.toString() + "," + j.toString();
 			albumHTML = albumHTML + '<a id="a" data-bs-target="#myModal" data-bs-toggle="modal" onclick="setCurID(event)"><img ondragover="allowDrop(event)" draggable="true" ondragstart="drag(event)" ondrop="drop(event)" class="albumarts" width=' + imgSize + ' height=' + imgSize + '  src="http://larics.rasip.fer.hr/wp-content/uploads/2016/04/default-placeholder.png" id="' + id + '" alt=""></a>';
-			//albumHTML = albumHTML + '<a id="a"><img class="albumarts" width=' + imgSize + ' height=' + imgSize + '  src="http://larics.rasip.fer.hr/wp-content/uploads/2016/04/default-placeholder.png" id="' + id + '" alt=""></a>';
 		}
 		albumHTML = albumHTML + "</div></div>" + '\n';
 	}
